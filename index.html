@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width user-scalable=no" />
+		<title>娱乐瞬间</title>
+		<style type="text/css">
+			body{
+				 background: #e6e6e6;
+				 
+			}
+			ul{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				width: 16rem;
+				overflow-y: hidden;
+			}
+			li{
+				margin-bottom: 30px;
+				margin-left: .2rem;
+			}
+			img{
+				width: 15rem;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="cnpcImg"></ul>
+	</body>
+	<script src="js/jquery-2.2.1.js"></script>
+	<script>
+		$('html').css('font-size',window.screen.width/16);
+		for (var i = 0 ;i < 6 ; i ++ ) {
+			$('<li>').appendTo($('#cnpcImg'));
+			$('li').eq(i).html('<img src="img/'+(i+1)+'.jpg">')
+		}
+	</script>
+</html>
